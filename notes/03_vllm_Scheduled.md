@@ -519,7 +519,7 @@ def _preempt_request(self, request, timestamp):
 
 这段代码很值得细看，因为它直接说明了几件事。
 
-### 8.1 当前 V1 稳定版里，你最应该先理解的是“重算式抢占”
+### 8.1 重算式抢占
 
 被抢占之后，请求会发生这些变化：
 
@@ -529,17 +529,6 @@ def _preempt_request(self, request, timestamp):
 4. 再被塞回 Waiting Queue
 
 这意味着它未来再次被调度时，**会重新从 Prefill 方向开始补进度**。
-
----
-
-### 8.2 为什么这篇不再把 “Swap vs Recomputation” 作为正文主轴
-
-如果这篇文章聚焦的是 **当前 V1 稳定版 `schedule()` 主路径**，那么更贴近事实的写法应该是：
-
-> **先把“当前 V1 默认更偏向 recompute 风格的抢占”讲清楚。**
-
-正文主线讲清楚当前 `_preempt_request()` 里直接能看到的行为就够了；
-`swap` 和 `recompute` 的更细工程取舍，可以以后单独再开一节写。
 
 ---
 
