@@ -439,21 +439,6 @@ if len(self.running) == self.max_num_running_reqs:
 
 否则它依旧会留在 Waiting 里。
 
-### 6.4 关于旧版 `can_allocate / NEVER / LATER / ALLOCATED` 的说明
-
-如果这篇文章聚焦的是 **当前 V1 稳定版 `schedule()` 主流程**，那旧版 `can_allocate + watermark` 更适合放在补充背景里，而不是正文主线。
-
-因为在当前稳定版公开源码路径里，你更直接看到的是：
-
-* `get_computed_blocks(...)`
-* 可选的 connector / remote KV 判断
-* `num_new_tokens` 计算
-* `allocate_slots(...)`
-* 失败则 `break`
-* 成功则从 Waiting 拉到 Running
-
-所以如果这一篇是写 **“我如何读懂当前 `schedule()`”**，建议把旧版 `can_allocate + watermark` 那套逻辑收起来，最多作为补充背景，而不要放在正文主线里。
-
 ---
 
 ## 7. 为什么 Waiting 里的请求有时也会带“已计算 token”信息
