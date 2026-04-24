@@ -1,16 +1,94 @@
-## Hi there 👋
+# 你好，我是 Zephyr7_ 👋
 
-<!--
-**Zephyrlove7/Zephyrlove7** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+计算机专业本科在读，当前主要聚焦 **AI Infra / LLM 推理优化 / vLLM / 高并发推理服务**。  
+希望持续积累与 **推理引擎、模型部署、服务性能优化、CUDA/GPU 基础** 相关的工程经验。
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 当前方向
+
+- 本地 LLM 推理服务重构与部署
+- vLLM / 推理链路 / OpenAI-compatible serving
+- TTFT / TPOT / Throughput / 接口级 benchmark
+- 高并发推理服务与应用层性能定位
+- CUDA / GPU 基础与推理加速相关知识学习
+
+---
+
+## 精选项目
+
+### 1. 旅游智能体后端重构为本地 vLLM 推理服务
+基于 **FastAPI + LangChain/LangGraph** 的旅游智能体后端，将原有云端 API 调用链重构为 **本地 vLLM OpenAI-compatible serving**。
+
+**项目亮点**
+- 将云端模型调用替换为本地 vLLM 推理服务
+- 保持 `/chat` 接口与角色化 Prompt 风格兼容
+- 对 Serving 层与应用层分别进行了 benchmark
+
+**Benchmark Snapshot**
+- Avg TTFT: **0.16s**
+- Avg TPOT: **0.0060s**
+- Throughput (gen): **166.91 tok/s**
+- 4-concurrency throughput: **575.93 tok/s**
+
+**当前结论**
+- Serving 层性能已验证
+- 应用层并发稳定性仍有继续优化空间
+
+---
+
+### 2. vLLM 源码学习笔记
+持续整理 vLLM 相关学习笔记，内容包括：
+
+- Engine / Worker / Executor
+- Scheduler / ModelRunner
+- PagedAttention
+- 分布式推理基础
+- 推理服务性能分析
+
+---
+
+## 技术栈
+
+**语言**
+- Python
+- C++
+
+**推理 / 后端 / AI Infra**
+- vLLM
+- FastAPI
+- LangChain
+- LangGraph
+- PyTorch
+- AWQ
+
+**当前学习中**
+- CUDA
+- GPU 架构基础
+- 分布式推理
+- FlashAttention
+- 高并发服务优化
+
+---
+
+## 近期在做
+
+- 重构 Agent 后端到本地 vLLM serving
+- 做 TTFT / TPOT / Throughput / `/chat` benchmark
+- 学习 vLLM 推理链路与核心组件
+- 补 CUDA / GPU / 推理优化相关基础
+
+---
+
+## 仓库导航
+
+- [`notes`](./notes)：学习笔记与源码阅读记录
+- 核心项目仓库：旅游智能体本地 vLLM 重构版
+- benchmark 相关脚本：接口压测 / token 指标测试
+
+---
+
+## 联系方式
+
+- GitHub: [@Zephyrlove7](https://github.com/Zephyrlove7)
+- 邮箱：3171726754@qq.com
