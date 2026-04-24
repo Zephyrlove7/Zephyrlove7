@@ -1,14 +1,14 @@
-# 你好，我是 Zephyr7_ 👋
+# 你好，我是 Zephyrlove 👋
 
 计算机专业本科在读，当前主要聚焦 **AI Infra / LLM 推理优化 / vLLM / 高并发推理服务**。  
-希望持续积累与 **推理引擎、模型部署、服务性能优化、CUDA/GPU 基础** 相关的工程经验。
+希望持续积累与 **推理引擎、模型部署、服务性能分析、CUDA / GPU 基础** 相关的工程经验。
 
 ---
 
 ## 当前方向
 
 - 本地 LLM 推理服务重构与部署
-- vLLM / 推理链路 / OpenAI-compatible serving
+- vLLM / OpenAI-compatible serving
 - TTFT / TPOT / Throughput / 接口级 benchmark
 - 高并发推理服务与应用层性能定位
 - CUDA / GPU 基础与推理加速相关知识学习
@@ -17,7 +17,7 @@
 
 ## 精选项目
 
-### 1. 旅游智能体后端重构为本地 vLLM 推理服务
+### 1. Tour Agent Backend with local vLLM serving
 基于 **FastAPI + LangChain/LangGraph** 的旅游智能体后端，将原有云端 API 调用链重构为 **本地 vLLM OpenAI-compatible serving**。
 
 **项目亮点**
@@ -35,16 +35,25 @@
 - Serving 层性能已验证
 - 应用层并发稳定性仍有继续优化空间
 
+🔗 项目链接：  
+[github.com/Zephyrlove7/tour-agent-vllm](https://github.com/Zephyrlove7/tour-agent-vllm)
+
 ---
 
-### 2. vLLM 源码学习笔记
-持续整理 vLLM 相关学习笔记，内容包括：
+## 学习 / 笔记
 
+目前持续整理与以下方向相关的笔记：
+
+- vLLM 源码
 - Engine / Worker / Executor
 - Scheduler / ModelRunner
 - PagedAttention
 - 分布式推理基础
+- CUDA / GPU 基础
 - 推理服务性能分析
+
+📒 笔记目录：  
+[`notes`](./notes)
 
 ---
 
@@ -53,6 +62,7 @@
 **语言**
 - Python
 - C++
+- SQL
 
 **推理 / 后端 / AI Infra**
 - vLLM
@@ -80,15 +90,7 @@
 
 ---
 
-## 仓库导航
-
-- [`notes`](./notes)：学习笔记与源码阅读记录
-- [`vLLM-based tour agent`](./vLLM-based tour agent)：旅游智能体本地 vLLM 重构版
-- benchmark 相关脚本：接口压测 / token 指标测试
-
----
-
 ## 联系方式
 
 - GitHub: [@Zephyrlove7](https://github.com/Zephyrlove7)
-- 邮箱：3171726754@qq.com
+- Email: 你的邮箱
