@@ -83,7 +83,7 @@
 ## 仓库导航
 
 - [`notes`](./notes)：学习笔记与源码阅读记录
-- 核心项目仓库：vLLM-based tour agent
+- [`vLLM-based tour agent`](./vLLM-based tour agent)：旅游智能体本地 vLLM 重构版
 - benchmark 相关脚本：接口压测 / token 指标测试
 
 ---
